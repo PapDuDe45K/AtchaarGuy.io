@@ -21,3 +21,27 @@ function currentSlide(n) {
 	slideIndex = n;
 	showSlides();
 }
+
+function plusSlides(n) {
+	slideIndex += n;
+	if (slideIndex > document.getElementsByClassName("slide").length) slideIndex = 1;
+	if (slideIndex < 1) slideIndex = document.getElementsByClassName("slide").length;
+	showSlides();
+}
+
+function toggleMenu() {
+	let menu = document.getElementById("nav-menu");
+	menu.classList.toggle("show");
+}
+
+// Form validation feedback
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+	e.preventDefault();
+	let name = document.getElementById('name').value.trim();
+	let email = document.getElementById('email').value.trim();
+	if (!name || !email) {
+		alert('Please fill in all required fields.');
+		return;
+	}
+	alert('Order successfully submitted!');
+});
