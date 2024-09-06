@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Condiments Co.</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body>
+	<!-- Header with navigation -->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#shop">Shop</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Main content -->
+	<main>
+		<!-- Hero section with call-to-action button and slideshow -->
+		<section id="home" class="hero">
+			<h1>Welcome to Condiments Co.</h1>
+			<p>Explore our selection of artisanal condiments</p>
+
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+				<div class="slide fade">
+					<img src="owner1.jpg" alt="Owner Picture 1" class="slide-image">
+					<p class="caption">Our Founder, Shawn, and his journey with condiments.</p>
+				</div>
+				<div class="slide fade">
+					<img src="product-journey1.jpeg" alt="Product Journey 1" class="slide-image">
+					<p class="caption">How we craft our artisanal condiments from scratch.</p>
+				</div>
+				<div class="slide fade">
+					<img src="product-journey2.jpeg" alt="Product Journey 2" class="slide-image">
+					<p class="caption">Our sustainable approach to producing premium condiments.</p>
+				</div>
+			</div>
+
+			<!-- Dots to indicate current slide -->
+			<div class="dots-container">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+		</section>
+
+		<!-- Shop section with product grid -->
+		<section id="shop" class="product-grid">
+			<!-- Product 1 -->
+			<div class="product">
+				<img src="product1.jpg" alt="Product 1">
+				<h2>Product 1</h2>
+				<p>$9.99</p>
+				<button>Add to Cart</button>
+			</div>
+			<!-- Product 2 -->
+			<div class="product">
+				<img src="product2.jpg" alt="Product 2">
+				<h2>Product 2</h2>
+				<p>$12.99</p>
+				<button>Add to Cart</button>
+			</div>
+			<!-- Additional products can be added here -->
+		</section>
+
+		<!-- About section with company information -->
+		<section id="about">
+			<h2>About Us</h2>
+			<p>We are a small group of students sharing the love of cuisine with our campus in the North</p>
+		</section>
+
+		<!-- Contact section with a form -->
+		<section id="contact">
+			<h2>Get in Touch</h2>
+			<p></p>
+			<form>
+				<!-- Contact form fields go here -->
+			</form>
+		</section>
+	</main>
+
+	<!-- Footer with copyright information -->
+	<footer>
+		<p>&copy; 2024 Condiments Co.</p>
+	</footer>
+
+	<!-- External JavaScript file -->
+	<script src="script.js"></script>
+</body>
+</html>
