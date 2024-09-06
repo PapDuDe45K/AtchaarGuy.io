@@ -1,47 +1,50 @@
-let slideIndex = 0;
-showSlides();
+// Slideshow script
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
-	let slides = document.getElementsByClassName("slide");
-	let dots = document.getElementsByClassName("dot");
-	for (let i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";  
+// Next/previous controls
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+	let i;
+	const slides = document.getElementsByClassName("slide");
+	const dots = document.getElementsByClassName("dot");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
 	}
-	slideIndex++;
-	if (slideIndex > slides.length) {slideIndex = 1}    
-	for (let i = 0; i < dots.length; i++) {
+	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex-1].style.display = "block";  
+	slides[slideIndex-1].style.display = "block";
 	dots[slideIndex-1].className += " active";
-	setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
-function currentSlide(n) {
-	slideIndex = n;
-	showSlides();
-}
+// Hamburger menu script
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 
-function plusSlides(n) {
-	slideIndex += n;
-	if (slideIndex > document.getElementsByClassName("slide").length) slideIndex = 1;
-	if (slideIndex < 1) slideIndex = document.getElementsByClassName("slide").length;
-	showSlides();
-}
-
-function toggleMenu() {
-	let menu = document.getElementById("nav-menu");
-	menu.classList.toggle("show");
-}
-
-// Form validation feedback
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-	e.preventDefault();
-	let name = document.getElementById('name').value.trim();
-	let email = document.getElementById('email').value.trim();
-	if (!name || !email) {
-		alert('Please fill in all required fields.');
-		return;
-	}
-	alert('Order successfully submitted!');
+hamburger.addEventListener('click', () => {
+	navMenu.classList.toggle('active');
 });
+
+// Footer Animation on Scroll
+const footer = document.querySelector('footer');
+
+function checkFooterInView() {
+	const rect = footer.getBoundingClientRect();
+	if (rect.top <= window.innerHeight) {
+		footer.classList.add('visible');
+	}
+}
+
+window.addEventListener('scroll', checkFooterInView);
+document.addEventListener('DOMContentLoaded', checkFooterInView);
