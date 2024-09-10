@@ -22,13 +22,14 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
+    
 
     <!-- Main content -->
     <main>
@@ -99,13 +100,13 @@
                 <input type="email" id="email" name="email" required aria-required="true">
 
                 <label for="phone">Phone Number (for WhatsApp):</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+1234567890" aria-required="true">
+                <input type="tel" id="phone" name="phone" required placeholder="(+27)" aria-required="true">
 
                 <label for="address">Delivery Address:</label>
                 <textarea id="address" name="address" rows="3" required aria-required="true"></textarea>
 
                 <label for="orderDetails">Order Details:</label>
-                <textarea id="orderDetails" name="orderDetails" rows="5" placeholder="Specify the products you want to order and quantities." required aria-required="true"></textarea>
+                <textarea id="orderDetails" name="orderDetails" rows="5" placeholder="" required aria-required="true"></textarea>
 
                 <button type="submit">Submit Order</button>
             </form>
