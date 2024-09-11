@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiments Co. - Artisanal Condiments</title>
+    <meta name="description" content="Condiments Co. offers a range of artisanal condiments crafted with love. Explore our products and get in touch to place your order.">
+    <meta name="keywords" content="condiments, artisanal condiments, hot sauce, chutney, order condiments">
+    <meta name="author" content="TM~tech">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://www.example.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <div class="logo"><a href="#home" aria-label="Go to homepage">Condiments Co.</a></div>
+            <ul id="nav-menu" class="nav-menu" style="border-radius: 23%;" aria-label="Main Navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero section with call-to-action button and slideshow -->
+        <section id="home" class="hero">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="owner1.png" alt="Founders Shawn and Lesego" class="slide-image">
+                    <p class="caption">The Founders, Shawn and Lesego, on their journey with condiments.</p>
+                </div>
+                <div class="slide fade">
+                    <img src="product-journey1.jpeg" alt="Crafting Condiments" class="slide-image">
+                    <p class="caption">How we craft our artisanal condiments from scratch.</p>
+                </div>
+                <div class="slide fade">
+                    <img src="coms.jpeg" alt="Community" class="slide-image">
+                    <p class="caption">Our community.</p>
+                </div>
+                <div class="slide fade">
+                    <img src="poster.jpeg" alt="Menu" class="slide-image">
+                    <p class="caption">What's on the menu?</p>
+                </div>
+            </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <div class="hero-content">
+                <h1>The Atchaar Guy Online</h1>
+                <p>Explore our selection of artisanal condiments</p>
+                <a href="#shop" class="button">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Shop section with product grid -->
+        <section id="shop" class="product-grid container">
+            <div class="product">
+                <img src="product_1.png" alt="Small Mild Atchaar">
+                <h2>Small Mild Atchaar</h2>
+                <p>R 10</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product_2.png" alt="Large Hot Atchaar">
+                <h2>Large Hot Atchaar</h2>
+                <p>R 50</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- About section with company information -->
+        <section id="about" class="container">
+            <h2>About Us</h2>
+            <p>We are a small group of students sharing the love of cuisine with our campus in the North.</p>
+        </section>
+
+        <!-- Contact section with a form to collect order details -->
+        <section id="contact" class="container">
+            <h2>Get in Touch to Place an Order</h2>
+            <p>Fill in the form below to place an order. We'll get back to you via email or WhatsApp to confirm the details and process your order.</p>
+            <form id="orderForm" action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="phone">Phone Number (for WhatsApp):</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(+27)" aria-required="true">
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="3" required aria-required="true"></textarea>
+
+                <label for="orderDetails">Order Details:</label>
+                <textarea id="orderDetails" name="orderDetails" rows="5" placeholder="" required aria-required="true"></textarea>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TM~tech The Atchaar Guy Online</p>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="script.js" defer></script>
+</body>
+</html>
