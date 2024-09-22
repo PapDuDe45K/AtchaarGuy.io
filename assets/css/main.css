@@ -928,15 +928,16 @@ section,
 .about .content ul {
   list-style: none;
   padding: 0;
+  position: center;
 }
 
 .about .content ul li {
   padding: 0 0 10px 30px;
-  position: relative;
+  position: center;
 }
 
 .about .content ul i {
-  position: absolute;
+  position: center;
   font-size: 20px;
   left: 0;
   top: -3px;
@@ -945,6 +946,7 @@ section,
 
 .about .content p:last-child {
   margin-bottom: 0;
+  position: center;
 }
 
 .about .pulsating-play-btn {
@@ -1654,3 +1656,8 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.glightbox {
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto;    /* Maintain aspect ratio */
+}
+
